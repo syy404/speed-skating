@@ -102,12 +102,12 @@ video {
 
 .title,
 .JAMWF {
-  position: absolute; /* 绝对定位title和JAMWF，使它们可以浮动在视频之上 */
-  z-index: 3; /* 确保这些元素在视频之上 */
+  position: absolute;
+  z-index: 3;
 }
 
 .box-video {
-  z-index: 1; /* 视频的z-index比title和JAMWF低 */
+  z-index: 1;
 }
 
 .memo {
@@ -286,7 +286,7 @@ video {
 .box-text-chart {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   align-self: stretch;
 }
 .box-pie {

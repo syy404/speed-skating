@@ -1,6 +1,8 @@
 $(document).ready(function () {
   $(window).scrollTop(0);
-
+  $("video").each(function () {
+    this.pause();
+  });
   //wait me!
   $("#waitme").fadeIn();
   $("body").css("overflow", "hidden");
@@ -19,9 +21,6 @@ $(document).ready(function () {
       $("#meme")[0].play();
     });
   });
-  $("video").each(function () {
-    this.pause();
-  });
 
   //scroll V
   ScrollReveal().reveal("p");
@@ -37,6 +36,7 @@ $(document).ready(function () {
         $(this).css("opacity", "1");
       });
     } else if (clickCount === 2) {
+      $("#meme")[0].pause();
       var containerTop = $(".container").offset().top;
       $("html, body").animate(
         {
@@ -54,11 +54,13 @@ $(document).ready(function () {
   $(".star img").click(function () {
     var $popstar = $(this).siblings(".popstar");
     if ($popstar.is(":visible")) {
-      $popstar.hide();
-      $(".popstar-text").hide();
+      $popstar.fadeOut();
+      $popstar.find(".popstar-text").css({ opacity: 0, visibility: "hidden" });
     } else {
-      $popstar.show();
-      $(".popstar-text").show();
+      $popstar.fadeIn();
+      $popstar.find(".popstar-text").css({ opacity: 1, visibility: "visible" });
     }
   });
+
+  //click candy
 });
