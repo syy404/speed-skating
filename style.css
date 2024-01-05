@@ -136,6 +136,16 @@ video {
   height: 602px;
   align-self: stretch;
 }
+.title1 {
+  color: #a32828;
+  text-align: justify;
+  font-family: HarmonyOS Sans SC;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 200%; /* 68px */
+  letter-spacing: 0.34px;
+}
 .title2 {
   color: #6c4f2c;
   text-align: center;
@@ -261,16 +271,17 @@ video {
   display: flex;
   padding: 45px;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 45px;
+  align-items: center;
+  gap: 31px;
   align-self: stretch;
   border-radius: 26px;
-  border: 3px solid #7b9cf1;
+  border: 3px solid #811111;
   background: #f9f9f9;
 }
 .box-text {
-  color: #7b9cf1;
+  color: #811111;
   text-align: justify;
+  align-self: stretch;
   /* text */
   font-family: HarmonyOS Sans SC;
   font-size: 20px;
