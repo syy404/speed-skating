@@ -1,25 +1,35 @@
 $(document).ready(function () {
+  $(window).scrollTop(0);
+
   //wait me!
-  $("#wait").show();
+  $("#waitme").fadeIn();
   $("body").css("overflow", "hidden");
-  function hideWaitAndEnableScroll() {
-    $("#wait").hide();
+  function hideWaitme() {
+    $("#waitme").fadeOut(function () {
+      $("#hintme").fadeIn();
+    });
     $("body").css("overflow", "auto");
   }
-  $(window).on("load", hideWaitAndEnableScroll);
-  setTimeout(hideWaitAndEnableScroll, 30000);
 
-  //play video
-  $("video").each(function () {
-    this.play();
+  //hint me!
+  $(window).on("load", hideWaitme);
+  setTimeout(hideWaitme, 30000);
+  $("#hintme").click(function () {
+    $(this).fadeOut(function () {
+      $("#meme")[0].play();
+    });
   });
+  $("video").each(function () {
+    this.pause();
+  });
+
+  //scroll V
   ScrollReveal().reveal("p");
   ScrollReveal().reveal("iframe");
-  $(".JAMWF").hide();
-  $("body").css("overflow", "hidden");
-  $(window).scrollTop(0);
+
+  // click game
   let clickCount = 0;
-  $(document).on("click", function () {
+  $(".frontpage").on("click", function () {
     clickCount++;
     if (clickCount === 1) {
       $(".title").fadeOut();
@@ -27,9 +37,10 @@ $(document).ready(function () {
         $(this).css("opacity", "1");
       });
     } else if (clickCount === 2) {
+      var containerTop = $(".container").offset().top;
       $("html, body").animate(
         {
-          scrollTop: "+=" + 1000,
+          scrollTop: containerTop,
         },
         800,
         function () {
@@ -43,11 +54,11 @@ $(document).ready(function () {
   $(".star img").click(function () {
     var $popstar = $(this).siblings(".popstar");
     if ($popstar.is(":visible")) {
-      $popstar.fadeOut();
-      $(".popstar-text").fadeOut();
+      $popstar.hide();
+      $(".popstar-text").hide();
     } else {
-      $popstar.fadeIn();
-      $(".popstar-text").fadeOut();
+      $popstar.show();
+      $(".popstar-text").show();
     }
   });
 });

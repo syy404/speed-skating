@@ -169,26 +169,42 @@ video {
 }
 
 /*FRONT PAGE*/
-#wait {
-  pointer-events: none;
-  display: none;
+#waitme {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.6);
-  z-index: 1000; /* 确保在最上层 */
+  pointer-events: none;
+  display: none;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+#hintme {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  display: none;
+  z-index: 1000;
   justify-content: center;
   align-items: center;
 }
 
 .frontpage {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
   height: 100vh;
   width: 100%;
-  align-items: center;
-  align-self: stretch;
   position: relative;
+}
+.frontpage > * {
+  flex: 0 0 auto;
 }
 .title {
   height: 100vh;
@@ -230,17 +246,17 @@ video {
   letter-spacing: 180px;
 }
 .JAMWF {
-  display: inline-flex;
+  display: none;
   gap: 40px;
   width: 658px;
   height: 202px;
-  left: 526px;
-  top: 350px;
   background-image: url(pic/JAMWF.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 26px;
+  justify-content: center;
+  align-items: center;
 }
 .JAMWF-text {
   display: flex;
