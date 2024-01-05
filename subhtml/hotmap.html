@@ -44,7 +44,7 @@
     var heatmapData = [{
         z: data,
         type: 'heatmap',
-        colorscale: [['0.0', 'blue'], ['0.5', 'white'], ['1.0', 'red']],
+        colorscale: [['0.0', '#2C3E6C'], ['0.5', 'white'], ['1.0', 'red']],
         transpose: true
     }];
 
@@ -59,8 +59,7 @@
     'Tomaszow',
     'Moscow',
     'Debrecen',
-    'Dresden',
-    'Budapest',
+    'Dresden',  
     'Helsinki',
     'Gangneung',
     'Montreal',
@@ -81,7 +80,6 @@ var citiesX = [
     'Montreal',
     'Gangneung',
     'Helsinki',
-    'Budapest',
     'Dresden',
     'Debrecen',
     'Moscow',
@@ -107,7 +105,7 @@ for (var i = 0; i < citiesY.length; i++) {
 var heatmapData = [{
     z: data,
     type: 'heatmap',
-    colorscale: [['0.0', 'blue'], ['0.5', 'white'], ['1.0', 'red']],
+    colorscale: [['0.0', '#007CAA'], ['0.5', 'white'], ['1.0', '#F98475']],
     transpose: true,
     text: cityNames, // 设置交互提示文本
     hoverinfo: 'text+z' // 显示 text 属性作为交互提示
@@ -127,7 +125,10 @@ var layout = {
         tickcolor:"#ebebe8",
         tickangle: -45, // 设置刻度标签的角度，便于阅读
         tickvals: [...Array(citiesX.length).keys()], // 创建一个与城市数量相等的索引数组
-        ticktext: citiesX // 设置 x 轴的标签文本为城市名称
+        ticktext: citiesX, // 设置 x 轴的标签文本为城市名称
+        tickfont: {
+            color: '#2c3e6c' // 设置 x 轴文本颜色
+        }
     },
     yaxis: {
         ticks: '   ',
@@ -136,6 +137,9 @@ var layout = {
         autorange:"reversed",
         tickvals: [...Array(citiesY.length).keys()], // 创建一个与城市数量相等的索引数组
         ticktext: citiesY, // 设置 y 轴的标签文本为城市名称
+        tickfont: {
+            color: '#2c3e6c' // 设置 x 轴文本颜色
+        }
     },
     width: 700, // 设置宽度
     height: 700 // 设置高度
