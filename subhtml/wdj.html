@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>男子500米成绩随年份的变化</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <style>
+            #container {
+                display: flex;
+            }
+            #myPlot {
+                flex: 70%; /* 70% of the container width */
+            }
+            #info {
+                flex: 30%; /* 30% of the container width */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            #athleteImage {
+                max-width: 300px;
+                max-height: 300px;
+            }
+            
+        </style>
+    </head>
+    <body>
+    
+    <div id="container">
+        <div id="myPlot"></div>
+        <div id="info">
+            <img id="athleteImage" src="" />
+            <div id="athleteName"></div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var years = ["03.04.1992",
+            "27.03.1993",
+            "09.12.1995",
+            "29.03.1996",
+            "24.01.1998",
+            "21.03.1998",
+            "29.03.1998",
+            "04.03.2000",
+            "13.10.2001",
+            "08.03.2003",
+            "18.10.2003",
+            "13.10.2007",
+            "10.02.2008",
+            "14.11.2009",
+            "21.10.2012",
+            "22.02.2018",
+            "22.02.2018",
+            "11.11.2018"];
+            var times = [43.43,43.08,42.85,42.68,42.648,42.458,41.938,41.742,41.514,41.289,41.184,41.066,41.051,40.651,39.937,39.8,39.584,39.505];
+            var athletes = ["LACKIE Mark","VUILLERMIN Mirko","CARNINO Maurizio","VUILLERMIN Mirko","VERSTEEG Dave","FENG Kai","FRANCESCHINA Nicola","SCHOLTEN Jeffrey","SCHOLTEN Jeffrey","SCHOLTEN Jeffrey","MONETTE Jean-Frangois","HAMELIN Frangois","SUNG Si-Bak","SUNG Si-Bak","J.R. Celski","WU Dajing","WU Dajing","WU Dajing"];
+            var images = [
+            "https://tse1-mm.cn.bing.net/th/id/OIP-C.8P1z8Cf4EYKnQSfBJqEgdgHaFn?rs=1&pid=ImgDetMain",
+            "https://th.bing.com/th/id/OIP.oveG51zeMByNS4jbHotHtQHaFj?rs=1&pid=ImgDetMain",
+            "https://media.gettyimages.com/id/56836515/photo/maurizio-carnino-of-italy-skates-during-the-mens-500m-race-at-the-2006-winter-olympics-13.jpg?s=612x612&w=gi&k=20&c=NpC3Z3cucaWwHfnFnqQYTscm5D5rg3tEXk1eg46SjJs=",
+            "https://th.bing.com/th/id/OIP.oveG51zeMByNS4jbHotHtQHaFj?rs=1&pid=ImgDetMain",
+            "https://media.gettyimages.com/id/1432024772/photo/dave-versteeg-niels-kerstholt-compete-in-the-during-the-dutch-open-shorttrack-at-thialf-on.jpg?s=612x612&w=gi&k=20&c=yNFyaaJernCMYa5-ToHrS5f2s_QaeueqaGMsY6Vtpz0=",
+            "https://th.bing.com/th/id/OIP.scuuNmnQnC3wItfKEBnPeAHaHa?rs=1&pid=ImgDetMain",
+            "https://media.gettyimages.com/id/51517554/photo/salt-lake-city-united-states-italian-nicola-franceschina-leads-the-pack-ahead-of-ron-biondo.jpg?s=612x612&w=gi&k=20&c=mHOB67BIqjMUd1zx_P92a0bdcJ11O3yczIJumWfSDR4=",
+            "https://speedskating.ca/wp-content/uploads/2021/07/Jeffrey-Scholten-Profile.png",
+            "https://speedskating.ca/wp-content/uploads/2021/08/Jeffrey-Scholten-Profile.png",
+            "https://speedskating.ca/wp-content/uploads/2021/09/Jeffrey-Scholten-Profile.png",
+            "https://sys-little-bucket.oss-cn-shanghai.aliyuncs.com/img/image-20231228212415630.png",
+            "https://sys-little-bucket.oss-cn-shanghai.aliyuncs.com/img/image-20231228212707456.png",
+            "https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2009/11/15/558567-22477722-2560-1440.jpg",
+            "https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2009/11/15/558567-22477722-2560-1440.jpg",
+            "https://th.bing.com/th/id/R.9a925e1742cf4d6c65cf643ffbb9c08f?rik=xk1n5v%2bRef3vOg&riu=http%3a%2f%2fwww.trbimg.com%2fimg-5303580a%2fturbine%2fchi-jr-celski-usa-short-track-speedskating-201-001%2f2048%2f2048x1365&ehk=6rFeTRmByJ1UNrHksWtvSGIJ8cFazwrpWCuwEdEQCb0%3d&risl=&pid=ImgRaw&r=0",
+            "https://th.bing.com/th/id/R.d2304c6aee9f851c4c3f8b2bb7a4873e?rik=tdjPXm3FQIXdJQ&riu=http%3a%2f%2fi2.hdslb.com%2fbfs%2farchive%2f50a0e1958c37f3398265fcf8283e59ea273aa0ad.png&ehk=DEyioUCMss00COdAPJawwJwIKXYSHMDq7gom3KlQcMc%3d&risl=&pid=ImgRaw&r=2",
+            "https://th.bing.com/th/id/R.d2304c6aee9f851c4c3f8b2bb7a4873e?rik=tdjPXm3FQIXdJQ&riu=http%3a%2f%2fi2.hdslb.com%2fbfs%2farchive%2f50a0e1958c37f3398265fcf8283e59ea273aa0ad.png&ehk=DEyioUCMss00COdAPJawwJwIKXYSHMDq7gom3KlQcMc%3d&risl=&pid=ImgRaw&r=1",
+            "https://th.bing.com/th/id/R.d2304c6aee9f851c4c3f8b2bb7a4873e?rik=tdjPXm3FQIXdJQ&riu=http%3a%2f%2fi2.hdslb.com%2fbfs%2farchive%2f50a0e1958c37f3398265fcf8283e59ea273aa0ad.png&ehk=DEyioUCMss00COdAPJawwJwIKXYSHMDq7gom3KlQcMc%3d&risl=&pid=ImgRaw&r=0"
+            ];
+    
+            // 使用 map 方法来创建统一格式的悬停文本
+            var hoverText = athletes.map(function(athlete, index) {
+                return `成绩：${times[index]}<br>运动员：${athlete}`;
+            });
+    
+            var trace1 = {
+                x: years,
+                y: times,
+                mode: 'lines+markers',
+                type: 'scatter',
+                line: { color: '#DF826C' },
+                text: hoverText,
+                customdata: images,
+                hoverinfo: 'text'
+            };
+    
+            var data = [trace1];
+    
+            var layout = {
+                plot_bgcolor: 'rgba(229,236,246,0.3)',
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                hovermode: 'x'
+            };
+    
+            var myPlot = document.getElementById('myPlot');
+            Plotly.newPlot(myPlot, data, layout);
+    
+            myPlot.on('plotly_hover', function(data){
+                var infotext = data.points[0].customdata;
+                var athleteName = data.points[0].text;
+                document.getElementById('athleteImage').src = infotext;
+                document.getElementById('athleteName').innerHTML = athleteName;
+            });
+        });
+    </script>
+    
+</body>
+</html>
