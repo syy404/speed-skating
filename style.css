@@ -103,8 +103,6 @@ video {
 .title,
 .JAMWF {
   position: absolute; /* 绝对定位title和JAMWF，使它们可以浮动在视频之上 */
-  top: 0; /* 根据需要调整这些值来定位元素 */
-  left: 0; /* 根据需要调整这些值来定位元素 */
   z-index: 3; /* 确保这些元素在视频之上 */
 }
 
