@@ -1,4 +1,15 @@
 $(document).ready(function () {
+  //wait me!
+  $("#wait").show();
+  $("body").css("overflow", "hidden");
+  function hideWaitAndEnableScroll() {
+    $("#wait").hide();
+    $("body").css("overflow", "auto");
+  }
+  $(window).on("load", hideWaitAndEnableScroll);
+  setTimeout(hideWaitAndEnableScroll, 30000);
+
+  //play video
   $("video").each(function () {
     this.play();
   });
@@ -10,7 +21,6 @@ $(document).ready(function () {
   let clickCount = 0;
   $(document).on("click", function () {
     clickCount++;
-
     if (clickCount === 1) {
       $(".title").fadeOut();
       $(".JAMWF").fadeIn(function () {
@@ -28,9 +38,10 @@ $(document).ready(function () {
       );
     }
   });
+
+  //star wall
   $(".star img").click(function () {
     var $popstar = $(this).siblings(".popstar");
-
     if ($popstar.is(":visible")) {
       $popstar.fadeOut();
       $(".popstar-text").fadeOut();
