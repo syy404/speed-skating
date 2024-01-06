@@ -1,0 +1,214 @@
+/*fonts*/
+@font-face {
+  font-family: harmony-bold;
+  src: url(fonts/HarmonyOS_Sans_SC_Bold.ttf);
+}
+@font-face {
+  font-family: harmony-black;
+  src: url(fonts/HarmonyOS_Sans_SC_Black.ttf);
+}
+@font-face {
+  font-family: harmony-light;
+  src: url(fonts/HarmonyOS_Sans_SC_Light.ttf);
+}
+@font-face {
+  font-family: harmony-medium;
+  src: url(fonts/HarmonyOS_Sans_SC_Medium.ttf);
+}
+@font-face {
+  font-family: harmony-regular;
+  src: url(fonts/HarmonyOS_Sans_SC_Regular.ttf);
+}
+@font-face {
+  font-family: harmony-thin;
+  src: url(fonts/HarmonyOS_Sans_SC_Thin.ttf);
+}
+
+/*basic*/
+h1,
+h2,
+h3,
+h4,
+h5,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #0a56af;
+  line-height: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: harmony-bold;
+  font-size: 96px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: harmony-bold;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: harmony-medium;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: harmony-medium;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+p {
+  color: #2c3e6c;
+  font-family: harmony-regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+
+iframe {
+  border: none;
+}
+
+.memo {
+  color: #878787;
+  font-family: harmony-regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+
+.container {
+  display: flex;
+  padding: 45px;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  z-index: 1;
+  margin: 0 15%;
+}
+
+/*Pizza*/
+.chart-autopie {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.piepop {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.57);
+  display: inline-flex;
+  padding: 5px 27px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.pie-pieces {
+  top: 51px;
+  left: 63px;
+  width: 310px;
+  height: 321.39px;
+  flex-shrink: 0;
+}
+.piepop p {
+  color: #dedede;
+  font-family: harmony-bold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+}
+/*star-wall*/
+
+/*table*/
+.table-row {
+  transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+  color: #2c3e6c; /* 默认的文本颜色 */ /* 默认的背景色 */
+}
+
+.table-row:hover {
+  color: white;
+  background-color: #2c3e6c;
+}
+
+/*media screen*/
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    margin: 0 10%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+/*ANIMATION*/
+/*pixelated*/
+.Image_wrapper__CEf6Z.Image_loaded__4V492 .Image_loader__d_Pxc {
+  display: none;
+}
+
+.Image_loader__d_Pxc {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+html.js .Image_loader__d_Pxc {
+  display: block;
+}
+
+.Image_loader__d_Pxc img {
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+.Image_loader__d_Pxc canvas {
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  transition: opacity 0.3s linear;
+  image-rendering: pixelated;
+}
+
+/*yuki*/
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #ebebe8;
+}

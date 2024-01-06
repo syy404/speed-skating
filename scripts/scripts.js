@@ -20,6 +20,7 @@ $(document).ready(function () {
     console.log("@@@ hint clicked");
     $(this).fadeOut(function () {
       $("#meme")[0].play();
+      console.log("@@@ video start");
     });
   });
 
@@ -32,11 +33,13 @@ $(document).ready(function () {
   $(".frontpage").on("click", function () {
     clickCount++;
     if (clickCount === 1) {
+      console.log("@@@ title clicked");
       $(".title").fadeOut();
       $(".JAMWF").fadeIn(function () {
         $(this).css("opacity", "1");
       });
     } else if (clickCount === 2) {
+      console.log("@@@ title clicked twice!");
       $("#meme")[0].pause();
       var containerTop = $(".container").offset().top;
       $("html, body").animate(
@@ -53,6 +56,7 @@ $(document).ready(function () {
 
   //star wall
   $(".star img").click(function () {
+    console.log("@@@ starwall start!");
     var $popstar = $(this).siblings(".popstar");
     if ($popstar.is(":visible")) {
       $popstar.fadeOut();

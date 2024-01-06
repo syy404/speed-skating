@@ -88,7 +88,6 @@ video {
   position: absolute;
   left: 50%;
   top: 50%;
-  /*保证视频内容始终居中*/
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100vh;
@@ -192,7 +191,14 @@ video {
   justify-content: center;
   align-items: center;
 }
-
+.box-title-text{
+  width: 80%;
+  height: 100%;
+  background-image: url(pic/title-text.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .frontpage {
   display: flex;
   justify-content: center;
@@ -568,9 +574,18 @@ html.js .Image_loader__d_Pxc {
 }
 @media screen and (min-width: 992px) {
   .container {
-    margin: 0 10%;
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1715px) {
+  .container {
+    margin: 0 20%;
+  }
 }

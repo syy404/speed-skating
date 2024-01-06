@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_81564a4dab5f4d4bde4a810343376a75 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_81564a4dab5f4d4bde4a810343376a75" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_81564a4dab5f4d4bde4a810343376a75 = L.map(
+                "map_81564a4dab5f4d4bde4a810343376a75",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a05db14fe5a71517346e1a625f74dbdf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a05db14fe5a71517346e1a625f74dbdf.addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+            var marker_6040081b84eb7bf684f4508a3213276b = L.marker(
+                [51.0437, -114.0808],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_0376afbce93258fae19a098f2942a439 = L.popup({"maxWidth": 3000, "tooltip": "Olympic Oval"});
+
+        
+            
+                var html_4d1426af9388760970bf57d22435603c = $(`<div id="html_4d1426af9388760970bf57d22435603c" style="width: 100.0%; height: 100.0%;">Venue:Olympic Oval<br>Location:Calgary</div>`)[0];
+                popup_0376afbce93258fae19a098f2942a439.setContent(html_4d1426af9388760970bf57d22435603c);
+            
+        
+
+        marker_6040081b84eb7bf684f4508a3213276b.bindPopup(popup_0376afbce93258fae19a098f2942a439)
+        ;
+
+        
+    
+    
+            var marker_720b0963ff9292b91d51935f30e6df20 = L.marker(
+                [40.385, -112.003],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_ce50c61f28d799c7efb655329680f5b8 = L.popup({"maxWidth": 3000, "tooltip": "Utah Olympic Oval"});
+
+        
+            
+                var html_d8b0455ae370fb488b4d5c5eb40af60f = $(`<div id="html_d8b0455ae370fb488b4d5c5eb40af60f" style="width: 100.0%; height: 100.0%;">Venue:Utah Olympic Oval<br>Location:Salt Lake City</div>`)[0];
+                popup_ce50c61f28d799c7efb655329680f5b8.setContent(html_d8b0455ae370fb488b4d5c5eb40af60f);
+            
+        
+
+        marker_720b0963ff9292b91d51935f30e6df20.bindPopup(popup_ce50c61f28d799c7efb655329680f5b8)
+        ;
+
+        
+    
+    
+            var marker_78850616ead390678ce8dfab1719d1d9 = L.marker(
+                [40.4209, -111.5701],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_f4316557624b6a3f3096428f1df32226 = L.popup({"maxWidth": 3000, "tooltip": "Maverik Center"});
+
+        
+            
+                var html_847bd1fe8cb91c4385e0895abddc8c04 = $(`<div id="html_847bd1fe8cb91c4385e0895abddc8c04" style="width: 100.0%; height: 100.0%;">Venue:Maverik Center<br>Location:Salt Lake City</div>`)[0];
+                popup_f4316557624b6a3f3096428f1df32226.setContent(html_847bd1fe8cb91c4385e0895abddc8c04);
+            
+        
+
+        marker_78850616ead390678ce8dfab1719d1d9.bindPopup(popup_f4316557624b6a3f3096428f1df32226)
+        ;
+
+        
+    
+    
+            var marker_4cab4dfa4d76a30217cbd528292f22b3 = L.marker(
+                [40.7683, -111.9011],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_0a693d6babcbe2977d765cfbd59ef922 = L.popup({"maxWidth": 3000, "tooltip": "Salt Lake Ice Center\uff08Delta Center\uff09"});
+
+        
+            
+                var html_2b242ebf8a3e5bbc3ebf35a370160436 = $(`<div id="html_2b242ebf8a3e5bbc3ebf35a370160436" style="width: 100.0%; height: 100.0%;">Venue:Salt Lake Ice Center（Delta Center）<br>Location:Salt Lake City</div>`)[0];
+                popup_0a693d6babcbe2977d765cfbd59ef922.setContent(html_2b242ebf8a3e5bbc3ebf35a370160436);
+            
+        
+
+        marker_4cab4dfa4d76a30217cbd528292f22b3.bindPopup(popup_0a693d6babcbe2977d765cfbd59ef922)
+        ;
+
+        
+    
+    
+            var marker_276f55d49ac41a2c1856583bef85cd12 = L.marker(
+                [39.5624, 116.1937],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_97523cc47a8d89a7dc91d8e025d1f89b = L.popup({"maxWidth": 3000, "tooltip": "\u9996\u90fd\u4f53\u80b2\u9986"});
+
+        
+            
+                var html_68d1b535b8357e6e2a1237f33daa54de = $(`<div id="html_68d1b535b8357e6e2a1237f33daa54de" style="width: 100.0%; height: 100.0%;">Venue:首都体育馆<br>Location:Beijing</div>`)[0];
+                popup_97523cc47a8d89a7dc91d8e025d1f89b.setContent(html_68d1b535b8357e6e2a1237f33daa54de);
+            
+        
+
+        marker_276f55d49ac41a2c1856583bef85cd12.bindPopup(popup_97523cc47a8d89a7dc91d8e025d1f89b)
+        ;
+
+        
+    
+    
+            var marker_3b413f26c21fdf50bf27d09484eae9fe = L.marker(
+                [46.2808, 10.2135],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_b60990924f31c2a81bd80e883ebdb0ae = L.popup({"maxWidth": 3000, "tooltip": "the Ice stadium"});
+
+        
+            
+                var html_6a580456dbb4269d0292e61da42d72f4 = $(`<div id="html_6a580456dbb4269d0292e61da42d72f4" style="width: 100.0%; height: 100.0%;">Venue:the Ice stadium<br>Location:Bormio</div>`)[0];
+                popup_b60990924f31c2a81bd80e883ebdb0ae.setContent(html_6a580456dbb4269d0292e61da42d72f4);
+            
+        
+
+        marker_3b413f26c21fdf50bf27d09484eae9fe.bindPopup(popup_b60990924f31c2a81bd80e883ebdb0ae)
+        ;
+
+        
+    
+    
+            var marker_3441e514fcb086e286c3c1ba8ae53a4d = L.marker(
+                [47.1136, 18.2901],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_374faf51b174efa8002cb91bb0a5b5ba = L.popup({"maxWidth": 3000, "tooltip": "Alba Vol\u00e1n J\u00e9gcsarnok"});
+
+        
+            
+                var html_de787f5e9e367a100714ac97d591a506 = $(`<div id="html_de787f5e9e367a100714ac97d591a506" style="width: 100.0%; height: 100.0%;">Venue:Alba Volán Jégcsarnok<br>Location:Budapest</div>`)[0];
+                popup_374faf51b174efa8002cb91bb0a5b5ba.setContent(html_de787f5e9e367a100714ac97d591a506);
+            
+        
+
+        marker_3441e514fcb086e286c3c1ba8ae53a4d.bindPopup(popup_374faf51b174efa8002cb91bb0a5b5ba)
+        ;
+
+        
+    
+    
+            var marker_109b4e8bc02c81ad1f512b413af7b9fe = L.marker(
+                [47.3004, 19.0603],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_9fd4a1ea160734cd0cf99f5f0205ac52 = L.popup({"maxWidth": 3000, "tooltip": "BOK Hall"});
+
+        
+            
+                var html_bbfeed746ce80e2935d41ed8fc6c9ea5 = $(`<div id="html_bbfeed746ce80e2935d41ed8fc6c9ea5" style="width: 100.0%; height: 100.0%;">Venue:BOK Hall<br>Location:Budapest</div>`)[0];
+                popup_9fd4a1ea160734cd0cf99f5f0205ac52.setContent(html_bbfeed746ce80e2935d41ed8fc6c9ea5);
+            
+        
+
+        marker_109b4e8bc02c81ad1f512b413af7b9fe.bindPopup(popup_9fd4a1ea160734cd0cf99f5f0205ac52)
+        ;
+
+        
+    
+    
+            var marker_2437a7fa38299570dc5be5ac98971d10 = L.marker(
+                [39.4431, -105.0116],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_f7b736a1392ad9ed0e825ca7ef91aff3 = L.popup({"maxWidth": 3000, "tooltip": "Former McNichols Sports Arena"});
+
+        
+            
+                var html_07d32f74c534b0db37c927c970e8859e = $(`<div id="html_07d32f74c534b0db37c927c970e8859e" style="width: 100.0%; height: 100.0%;">Venue:Former McNichols Sports Arena<br>Location:Denver</div>`)[0];
+                popup_f7b736a1392ad9ed0e825ca7ef91aff3.setContent(html_07d32f74c534b0db37c927c970e8859e);
+            
+        
+
+        marker_2437a7fa38299570dc5be5ac98971d10.bindPopup(popup_f7b736a1392ad9ed0e825ca7ef91aff3)
+        ;
+
+        
+    
+    
+            var marker_02689f38ab37e0026106bc5fc6835632 = L.marker(
+                [44.1659, -73.5906],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_98a3ef3cb8227584fabc1623886163b0 = L.popup({"maxWidth": 3000, "tooltip": "Herb Brooks Arena"});
+
+        
+            
+                var html_c0c8571b50ba8c4535e7511ef5e4114c = $(`<div id="html_c0c8571b50ba8c4535e7511ef5e4114c" style="width: 100.0%; height: 100.0%;">Venue:Herb Brooks Arena<br>Location:Lake Placid</div>`)[0];
+                popup_98a3ef3cb8227584fabc1623886163b0.setContent(html_c0c8571b50ba8c4535e7511ef5e4114c);
+            
+        
+
+        marker_02689f38ab37e0026106bc5fc6835632.bindPopup(popup_98a3ef3cb8227584fabc1623886163b0)
+        ;
+
+        
+    
+    
+            var marker_b8e3bce9eddc79d5b3015a72ca03f19a = L.marker(
+                [52.0204, 4.1449],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_48a4f4f9829660f5abf5ef74649866ac = L.popup({"maxWidth": 3000, "tooltip": "De Uithof"});
+
+        
+            
+                var html_eb7ce9ba3ed2ee275f88079f1861779e = $(`<div id="html_eb7ce9ba3ed2ee275f88079f1861779e" style="width: 100.0%; height: 100.0%;">Venue:De Uithof<br>Location:Den Haag</div>`)[0];
+                popup_48a4f4f9829660f5abf5ef74649866ac.setContent(html_eb7ce9ba3ed2ee275f88079f1861779e);
+            
+        
+
+        marker_b8e3bce9eddc79d5b3015a72ca03f19a.bindPopup(popup_48a4f4f9829660f5abf5ef74649866ac)
+        ;
+
+        
+    
+    
+            var marker_3c7aec1b33419c18cbb513febfdc9c88 = L.marker(
+                [37.4643, 128.5358],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_4bc62c39590c99e0229a1ca2da65d3fe = L.popup({"maxWidth": 3000, "tooltip": "Gangneung Ice Arena"});
+
+        
+            
+                var html_908a7e34fd192f679d59edf4bfa6a4bc = $(`<div id="html_908a7e34fd192f679d59edf4bfa6a4bc" style="width: 100.0%; height: 100.0%;">Venue:Gangneung Ice Arena<br>Location:Gangneung</div>`)[0];
+                popup_4bc62c39590c99e0229a1ca2da65d3fe.setContent(html_908a7e34fd192f679d59edf4bfa6a4bc);
+            
+        
+
+        marker_3c7aec1b33419c18cbb513febfdc9c88.bindPopup(popup_4bc62c39590c99e0229a1ca2da65d3fe)
+        ;
+
+        
+    
+    
+            var marker_b6d57ee4372a7590a8c1e2bca75aa7d9 = L.marker(
+                [45.3343, -73.325],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_f5525912b86fc658c5f0f04c467e4c33 = L.popup({"maxWidth": 3000, "tooltip": "Maurice Richard Arena"});
+
+        
+            
+                var html_230ba68e26537dea288d3ed4e6d644a6 = $(`<div id="html_230ba68e26537dea288d3ed4e6d644a6" style="width: 100.0%; height: 100.0%;">Venue:Maurice Richard Arena<br>Location:Montreal</div>`)[0];
+                popup_f5525912b86fc658c5f0f04c467e4c33.setContent(html_230ba68e26537dea288d3ed4e6d644a6);
+            
+        
+
+        marker_b6d57ee4372a7590a8c1e2bca75aa7d9.bindPopup(popup_f5525912b86fc658c5f0f04c467e4c33)
+        ;
+
+        
+    
+    
+            var marker_66b660847b7af0060460dc82587348d2 = L.marker(
+                [36.3617, 138.1222],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_b151c068a880d7bc9896a5859ff80079 = L.popup({"maxWidth": 3000, "tooltip": "White Ring"});
+
+        
+            
+                var html_49f9c4e0beda897894c9e0d4e0568b93 = $(`<div id="html_49f9c4e0beda897894c9e0d4e0568b93" style="width: 100.0%; height: 100.0%;">Venue:White Ring<br>Location:Nagano</div>`)[0];
+                popup_b151c068a880d7bc9896a5859ff80079.setContent(html_49f9c4e0beda897894c9e0d4e0568b93);
+            
+        
+
+        marker_66b660847b7af0060460dc82587348d2.bindPopup(popup_b151c068a880d7bc9896a5859ff80079)
+        ;
+
+        
+    
+    
+            var marker_2c9b345bc30fcb96671c7e13467b9465 = L.marker(
+                [36.3746, 138.1148],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_1936aee0dab298d0e99cb3c51780cca2 = L.popup({"maxWidth": 3000, "tooltip": "Multipurpose Sports Arena"});
+
+        
+            
+                var html_2ecc67e5fc396e18486e3acf17254b7e = $(`<div id="html_2ecc67e5fc396e18486e3acf17254b7e" style="width: 100.0%; height: 100.0%;">Venue:Multipurpose Sports Arena<br>Location:Nagano</div>`)[0];
+                popup_1936aee0dab298d0e99cb3c51780cca2.setContent(html_2ecc67e5fc396e18486e3acf17254b7e);
+            
+        
+
+        marker_2c9b345bc30fcb96671c7e13467b9465.bindPopup(popup_1936aee0dab298d0e99cb3c51780cca2)
+        ;
+
+        
+    
+    
+            var marker_7c3f9bce4da85e4fb6a9dd2966a32e5e = L.marker(
+                [47.2418, 10.1712],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_8896408b96733457ece477d03aa74e32 = L.popup({"maxWidth": 3000, "tooltip": "Sportst\u00e4tten Oberstdorf"});
+
+        
+            
+                var html_108da383bfa60f668594e535536460e2 = $(`<div id="html_108da383bfa60f668594e535536460e2" style="width: 100.0%; height: 100.0%;">Venue:Sportstätten Oberstdorf<br>Location:Oberstdorf</div>`)[0];
+                popup_8896408b96733457ece477d03aa74e32.setContent(html_108da383bfa60f668594e535536460e2);
+            
+        
+
+        marker_7c3f9bce4da85e4fb6a9dd2966a32e5e.bindPopup(popup_8896408b96733457ece477d03aa74e32)
+        ;
+
+        
+    
+    
+            var marker_d26aa2dd383f88f68438c1367aa96645 = L.marker(
+                [47.1148, 18.243],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_ff9a8c0de1239231a2af1a793d902b0f = L.popup({"maxWidth": 3000, "tooltip": "Kori Liget"});
+
+        
+            
+                var html_b82c68ea58ab8bcf76fb6295b356ac25 = $(`<div id="html_b82c68ea58ab8bcf76fb6295b356ac25" style="width: 100.0%; height: 100.0%;">Venue:Kori Liget<br>Location:Székesfehérvár</div>`)[0];
+                popup_ff9a8c0de1239231a2af1a793d902b0f.setContent(html_b82c68ea58ab8bcf76fb6295b356ac25);
+            
+        
+
+        marker_d26aa2dd383f88f68438c1367aa96645.bindPopup(popup_ff9a8c0de1239231a2af1a793d902b0f)
+        ;
+
+        
+    
+    
+            var marker_d97787abaf09774dd5a0a6b85e8446b7 = L.marker(
+                [45.1103, 5.4418],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_3d4ca25cb3f1ede6e3699d1f0357c60f = L.popup({"maxWidth": 3000, "tooltip": "L\u0027anneau de vitesse"});
+
+        
+            
+                var html_ff9587ac84602b07c6ac3677f59a19de = $(`<div id="html_ff9587ac84602b07c6ac3677f59a19de" style="width: 100.0%; height: 100.0%;">Venue:L&#39;anneau de vitesse<br>Location:Albertville</div>`)[0];
+                popup_3d4ca25cb3f1ede6e3699d1f0357c60f.setContent(html_ff9587ac84602b07c6ac3677f59a19de);
+            
+        
+
+        marker_d97787abaf09774dd5a0a6b85e8446b7.bindPopup(popup_3d4ca25cb3f1ede6e3699d1f0357c60f)
+        ;
+
+        
+    
+    
+            var marker_42bd0ebd81acfbcd9cc0a83609e9e411 = L.marker(
+                [51.0344, 13.432],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_328ca19d5ba9a21426666afcbfc001ae = L.popup({"maxWidth": 3000, "tooltip": "EnergieVerbund Arena"});
+
+        
+            
+                var html_174b4c044bdeb97d417b8ea4494969e2 = $(`<div id="html_174b4c044bdeb97d417b8ea4494969e2" style="width: 100.0%; height: 100.0%;">Venue:EnergieVerbund Arena<br>Location:Dresden</div>`)[0];
+                popup_328ca19d5ba9a21426666afcbfc001ae.setContent(html_174b4c044bdeb97d417b8ea4494969e2);
+            
+        
+
+        marker_42bd0ebd81acfbcd9cc0a83609e9e411.bindPopup(popup_328ca19d5ba9a21426666afcbfc001ae)
+        ;
+
+        
+    
+    
+            var marker_50e2af3bd78963518e08c01f469ed2bb = L.marker(
+                [60.4735, 10.4104],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_fb8919f712e221214f5c0cc4b3f56d4f = L.popup({"maxWidth": 3000, "tooltip": "Gj\u00f8vik Olympic Cavern Hall"});
+
+        
+            
+                var html_0bd0e61a704b77d0d7ccb71c218e105a = $(`<div id="html_0bd0e61a704b77d0d7ccb71c218e105a" style="width: 100.0%; height: 100.0%;">Venue:Gjøvik Olympic Cavern Hall<br>Location:Gjøvik</div>`)[0];
+                popup_fb8919f712e221214f5c0cc4b3f56d4f.setContent(html_0bd0e61a704b77d0d7ccb71c218e105a);
+            
+        
+
+        marker_50e2af3bd78963518e08c01f469ed2bb.bindPopup(popup_fb8919f712e221214f5c0cc4b3f56d4f)
+        ;
+
+        
+    
+    
+            var marker_7303ff108b450993a6684a2c24ab6b51 = L.marker(
+                [53.121, 5.4607],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_4ebd243a209be805d5b32f0bb7f6c735 = L.popup({"maxWidth": 3000, "tooltip": "Elfstedenhal"});
+
+        
+            
+                var html_7bfd1d4f3d3215657300c41b2a1417da = $(`<div id="html_7bfd1d4f3d3215657300c41b2a1417da" style="width: 100.0%; height: 100.0%;">Venue:Elfstedenhal<br>Location:Groningen</div>`)[0];
+                popup_4ebd243a209be805d5b32f0bb7f6c735.setContent(html_7bfd1d4f3d3215657300c41b2a1417da);
+            
+        
+
+        marker_7303ff108b450993a6684a2c24ab6b51.bindPopup(popup_4ebd243a209be805d5b32f0bb7f6c735)
+        ;
+
+        
+    
+    
+            var marker_9eac4f3ca41d0afa0ec12c4cb2249455 = L.marker(
+                [51.1458, 0.3347],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_cc29b016700a0f3505362eadcb308978 = L.popup({"maxWidth": 3000, "tooltip": "Guildford Spectrum"});
+
+        
+            
+                var html_8b7925757dc7fb94f20fbde5be96d2ea = $(`<div id="html_8b7925757dc7fb94f20fbde5be96d2ea" style="width: 100.0%; height: 100.0%;">Venue:Guildford Spectrum<br>Location:Guildford</div>`)[0];
+                popup_cc29b016700a0f3505362eadcb308978.setContent(html_8b7925757dc7fb94f20fbde5be96d2ea);
+            
+        
+
+        marker_9eac4f3ca41d0afa0ec12c4cb2249455.bindPopup(popup_cc29b016700a0f3505362eadcb308978)
+        ;
+
+        
+    
+    
+            var marker_353a62717fbd1e11e3529f5c9107b337 = L.marker(
+                [60.4735, 11.0603],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_346a8c9fe94012b99a420baedaa067e1 = L.popup({"maxWidth": 3000, "tooltip": "Hamar Olympic Hall"});
+
+        
+            
+                var html_405b27e804d73deac179a91bbba7e6db = $(`<div id="html_405b27e804d73deac179a91bbba7e6db" style="width: 100.0%; height: 100.0%;">Venue:Hamar Olympic Hall<br>Location:Hamar</div>`)[0];
+                popup_346a8c9fe94012b99a420baedaa067e1.setContent(html_405b27e804d73deac179a91bbba7e6db);
+            
+        
+
+        marker_353a62717fbd1e11e3529f5c9107b337.bindPopup(popup_346a8c9fe94012b99a420baedaa067e1)
+        ;
+
+        
+    
+    
+            var marker_47d7b7efae54e63e99850b61927146a0 = L.marker(
+                [30.1557, 120.0801],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_9141d24bb7e99d1a75e5a0fd8ef436c5 = L.popup({"maxWidth": 3000, "tooltip": "\u676d\u5dde\u9ec4\u9f99\u4f53\u80b2\u4e2d\u5fc3\u4f53\u80b2\u9986"});
+
+        
+            
+                var html_8cb3ff48ab5fabb417d29452afc5520b = $(`<div id="html_8cb3ff48ab5fabb417d29452afc5520b" style="width: 100.0%; height: 100.0%;">Venue:杭州黄龙体育中心体育馆<br>Location:Hangzhou</div>`)[0];
+                popup_9141d24bb7e99d1a75e5a0fd8ef436c5.setContent(html_8cb3ff48ab5fabb417d29452afc5520b);
+            
+        
+
+        marker_47d7b7efae54e63e99850b61927146a0.bindPopup(popup_9141d24bb7e99d1a75e5a0fd8ef436c5)
+        ;
+
+        
+    
+    
+            var marker_72df9669eea2ac44f4a22ae780b276fa = L.marker(
+                [42.3355, 0.3302],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_577c1d70f9952a559de70e162f65c60f = L.popup({"maxWidth": 3000, "tooltip": "Pista de Hielo de Jaca"});
+
+        
+            
+                var html_f4848fdccfe7b99fe1e972e11b2cdbe6 = $(`<div id="html_f4848fdccfe7b99fe1e972e11b2cdbe6" style="width: 100.0%; height: 100.0%;">Venue:Pista de Hielo de Jaca<br>Location:Jaca</div>`)[0];
+                popup_577c1d70f9952a559de70e162f65c60f.setContent(html_f4848fdccfe7b99fe1e972e11b2cdbe6);
+            
+        
+
+        marker_72df9669eea2ac44f4a22ae780b276fa.bindPopup(popup_577c1d70f9952a559de70e162f65c60f)
+        ;
+
+        
+    
+    
+            var marker_185c1db22cc128bc8314a27e7475b7c8 = L.marker(
+                [31.230391, 121.473701],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_8c9777261737a7ad917d81797595dfad = L.popup({"maxWidth": 3000, "tooltip": "\u4e0a\u6d77\u4e1c\u65b9\u4f53\u80b2\u4e2d\u5fc3"});
+
+        
+            
+                var html_0f879e7e9a496b359b60dde5bacdc94c = $(`<div id="html_0f879e7e9a496b359b60dde5bacdc94c" style="width: 100.0%; height: 100.0%;">Venue:上海东方体育中心<br>Location:Shanghai</div>`)[0];
+                popup_8c9777261737a7ad917d81797595dfad.setContent(html_0f879e7e9a496b359b60dde5bacdc94c);
+            
+        
+
+        marker_185c1db22cc128bc8314a27e7475b7c8.bindPopup(popup_8c9777261737a7ad917d81797595dfad)
+        ;
+
+        
+    
+    
+            var marker_4df204976c2da73c9966d3ffb1b9b5b5 = L.marker(
+                [49.1708, -123.0233],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_8661258dcd47f0948f8893b9e85cc26b = L.popup({"maxWidth": 3000, "tooltip": "Pacific Coliseum"});
+
+        
+            
+                var html_0a2026934860114a5dc409afdf9a12c0 = $(`<div id="html_0a2026934860114a5dc409afdf9a12c0" style="width: 100.0%; height: 100.0%;">Venue:Pacific Coliseum<br>Location:Vancouver</div>`)[0];
+                popup_8661258dcd47f0948f8893b9e85cc26b.setContent(html_0a2026934860114a5dc409afdf9a12c0);
+            
+        
+
+        marker_4df204976c2da73c9966d3ffb1b9b5b5.bindPopup(popup_8661258dcd47f0948f8893b9e85cc26b)
+        ;
+
+        
+    
+    
+            var marker_7dc7460b2f3cea073e9d3d8df10a8ae9 = L.marker(
+                [49.1708, -113.3721],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_2e638e5aefd72869b6140f3881d96b3c = L.popup({"maxWidth": 3000, "tooltip": "Edmonton Ice Centre(Ice Palace)"});
+
+        
+            
+                var html_51200abafbcd03609032607728bdede8 = $(`<div id="html_51200abafbcd03609032607728bdede8" style="width: 100.0%; height: 100.0%;">Venue:Edmonton Ice Centre(Ice Palace)<br>Location:Edmonton</div>`)[0];
+                popup_2e638e5aefd72869b6140f3881d96b3c.setContent(html_51200abafbcd03609032607728bdede8);
+            
+        
+
+        marker_7dc7460b2f3cea073e9d3d8df10a8ae9.bindPopup(popup_2e638e5aefd72869b6140f3881d96b3c)
+        ;
+
+        
+    
+    
+            var marker_bd84d26b5b92528e264c0b1aaf89dd76 = L.marker(
+                [48.1208, 16.2001],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_612e6234ddf7a04b4249a792c9ef9bfe = L.popup({"maxWidth": 3000, "tooltip": "Wiener Stadthalle"});
+
+        
+            
+                var html_ae67f6529880ed1af74137c15a86b10d = $(`<div id="html_ae67f6529880ed1af74137c15a86b10d" style="width: 100.0%; height: 100.0%;">Venue:Wiener Stadthalle<br>Location:Wien</div>`)[0];
+                popup_612e6234ddf7a04b4249a792c9ef9bfe.setContent(html_ae67f6529880ed1af74137c15a86b10d);
+            
+        
+
+        marker_bd84d26b5b92528e264c0b1aaf89dd76.bindPopup(popup_612e6234ddf7a04b4249a792c9ef9bfe)
+        ;
+
+        
+    
+    
+            var marker_7c3e83b3579f947b5012e6ff09253624 = L.marker(
+                [43.5214, 125.2043],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_8b542552d5f24c405c89949ee6d25a1e = L.popup({"maxWidth": 3000, "tooltip": "\u957f\u6625\u4e94\u73af\u4f53\u80b2\u9986"});
+
+        
+            
+                var html_3adab4265de1a08459c02e728e5d7e2a = $(`<div id="html_3adab4265de1a08459c02e728e5d7e2a" style="width: 100.0%; height: 100.0%;">Venue:长春五环体育馆<br>Location:Changchun</div>`)[0];
+                popup_8b542552d5f24c405c89949ee6d25a1e.setContent(html_3adab4265de1a08459c02e728e5d7e2a);
+            
+        
+
+        marker_7c3e83b3579f947b5012e6ff09253624.bindPopup(popup_8b542552d5f24c405c89949ee6d25a1e)
+        ;
+
+        
+    
+    
+            var marker_bd747f80ca4f4cdee771b5b2e4c8bce2 = L.marker(
+                [46.3326, -123.0233],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_6e80f2aecca085c956f8b5cc7656db7c = L.popup({"maxWidth": 3000, "tooltip": "Berry Events Center"});
+
+        
+            
+                var html_cac8c48edd70fab41080412a52ca7dd5 = $(`<div id="html_cac8c48edd70fab41080412a52ca7dd5" style="width: 100.0%; height: 100.0%;">Venue:Berry Events Center<br>Location:Marquette</div>`)[0];
+                popup_6e80f2aecca085c956f8b5cc7656db7c.setContent(html_cac8c48edd70fab41080412a52ca7dd5);
+            
+        
+
+        marker_bd747f80ca4f4cdee771b5b2e4c8bce2.bindPopup(popup_6e80f2aecca085c956f8b5cc7656db7c)
+        ;
+
+        
+    
+    
+            var marker_3ccb7567b168748ee890655e55b02fda = L.marker(
+                [45.4517, 126.415],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_4893ca5ba49281dfa18c941b1b9832b7 = L.popup({"maxWidth": 3000, "tooltip": "\u54c8\u5c14\u6ee8\u56fd\u9645\u4f1a\u5c55\u4f53\u80b2\u4e2d\u5fc3\u4f53\u80b2\u9986"});
+
+        
+            
+                var html_7e4097b16cdbe653b57ec279af8831a3 = $(`<div id="html_7e4097b16cdbe653b57ec279af8831a3" style="width: 100.0%; height: 100.0%;">Venue:哈尔滨国际会展体育中心体育馆<br>Location:Harbin</div>`)[0];
+                popup_4893ca5ba49281dfa18c941b1b9832b7.setContent(html_7e4097b16cdbe653b57ec279af8831a3);
+            
+        
+
+        marker_3ccb7567b168748ee890655e55b02fda.bindPopup(popup_4893ca5ba49281dfa18c941b1b9832b7)
+        ;
+
+        
+    
+    
+            var marker_7b541e05f8060824d24e86577ac7e506 = L.marker(
+                [37.3109, 127.0738],
+                {}
+            ).addTo(map_81564a4dab5f4d4bde4a810343376a75);
+        
+    
+        var popup_f47ba96e77b41a3fe7e91de9a373c8ca = L.popup({"maxWidth": 3000, "tooltip": "Seoul Olympic Park Gymnasium"});
+
+        
+            
+                var html_efd9e9d3270b244b4aea40a64b4bd0d9 = $(`<div id="html_efd9e9d3270b244b4aea40a64b4bd0d9" style="width: 100.0%; height: 100.0%;">Venue:Seoul Olympic Park Gymnasium<br>Location:Seoul</div>`)[0];
+                popup_f47ba96e77b41a3fe7e91de9a373c8ca.setContent(html_efd9e9d3270b244b4aea40a64b4bd0d9);
+            
+        
+
+        marker_7b541e05f8060824d24e86577ac7e506.bindPopup(popup_f47ba96e77b41a3fe7e91de9a373c8ca)
+        ;
+
+        
+    
+</script>
+</html>
