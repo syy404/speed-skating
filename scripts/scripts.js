@@ -15,8 +15,9 @@ $(document).ready(function () {
 
   //hint me!
   $(window).on("load", hideWaitme);
-  setTimeout(hideWaitme, 30000);
+  //setTimeout(hideWaitme, 30000);
   $("#hintme").click(function () {
+    console.log("@@@ hint clicked");
     $(this).fadeOut(function () {
       $("#meme")[0].play();
     });
