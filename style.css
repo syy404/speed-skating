@@ -191,7 +191,7 @@ video {
   justify-content: center;
   align-items: center;
 }
-.box-title-text{
+.box-title-text {
   width: 80%;
   height: 100%;
   background-image: url(pic/title-text.png);
@@ -289,6 +289,7 @@ video {
   line-height: normal;
 }
 /*BODY TEXT*/
+
 .box-text-chart {
   display: flex;
   justify-content: space-between;
@@ -459,6 +460,37 @@ video {
   line-height: normal;
   letter-spacing: 0.16px;
 }
+#pie1,
+#pie2,
+#pie3,
+#pie4,
+#pie5 {
+  display: none;
+}
+#pie11,
+#pie22,
+#pie33,
+#pie44,
+#pie55 {
+  transition: all 0.3s ease;
+}
+
+#pie11:hover {
+  transform: translateY(-5px);
+}
+#pie22:hover {
+  transform: translateY(-5px);
+}
+#pie33:hover {
+  transform: translateY(-5px);
+}
+#pie44:hover {
+  transform: translateY(-5px);
+}
+#pie55:hover {
+  transform: translateY(-5px);
+}
+
 /* BUBBLE */
 .chart-bubble {
   display: flex;
@@ -589,3 +621,4 @@ html.js .Image_loader__d_Pxc {
     margin: 0 20%;
   }
 }
+/*  */
