@@ -83,6 +83,7 @@ $(document).ready(function () {
   });
 
   //click candy
+
   $("#pie11").click(function () {
     if ($("#pie1").is(":visible")) {
       $("#pie1").fadeOut("fast");
